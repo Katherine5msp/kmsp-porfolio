@@ -45,6 +45,7 @@ const initialTheme = getInitialTheme();
 applyTheme(initialTheme);
 
 if (themeToggle) {
+    themeToggle.hidden = false;
     themeToggle.addEventListener("click", () => {
         const currentTheme = root.dataset.theme || "light";
 

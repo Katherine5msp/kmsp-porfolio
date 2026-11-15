@@ -1,7 +1,7 @@
 
 /* =========================================
    KMSP PORTFOLIO
-   Visual identity: Lilac, Navy & White
+   Visual identity: Balanced Burgundy
    ========================================= */
 
 
@@ -10,22 +10,22 @@
 :root {
     color-scheme: light;
 
-    --color-background: #f8f7fc;
+    --color-background: #f7f4f2;
     --color-surface: #ffffff;
-    --color-surface-soft: #f0edf9;
+    --color-surface-soft: #f0e7e7;
 
-    --color-primary: #8270b5;
-    --color-primary-dark: #66538f;
-    --color-primary-light: #e9e3f5;
+    --color-primary: #7a263a;
+    --color-primary-dark: #5e1d2d;
+    --color-primary-light: #f1dfe4;
 
-    --color-heading: #202039;
-    --color-text: #55546a;
-    --color-muted: #858397;
+    --color-heading: #292326;
+    --color-text: #51464a;
+    --color-muted: #786a70;
 
-    --color-border: #e7e3ef;
+    --color-border: #e5d7da;
 
     --color-shadow: rgba(40, 31, 72, 0.07);
-    --color-focus: #8c70c7;
+    --color-focus: #7a263a;
 
     --font-main: "Inter", "Segoe UI", Arial, sans-serif;
 
@@ -44,22 +44,22 @@
 :root[data-theme="dark"] {
     color-scheme: dark;
 
-    --color-background: #171625;
-    --color-surface: #222033;
-    --color-surface-soft: #2b2740;
+    --color-background: #1d171a;
+    --color-surface: #2b2025;
+    --color-surface-soft: #38272e;
 
-    --color-primary: #b6a2e5;
-    --color-primary-dark: #c8b8ee;
-    --color-primary-light: #38304f;
+    --color-primary: #e6a5b5;
+    --color-primary-dark: #f0c0cc;
+    --color-primary-light: #49303a;
 
-    --color-heading: #f3efff;
-    --color-text: #cbc6dc;
-    --color-muted: #a29bb8;
+    --color-heading: #fff4f6;
+    --color-text: #e5d4d9;
+    --color-muted: #c6a6b0;
 
-    --color-border: #39344d;
+    --color-border: #58404a;
 
     --color-shadow: rgba(0, 0, 0, 0.2);
-    --color-focus: #c6aaff;
+    --color-focus: #f0b4c4;
 }
 
 
@@ -698,19 +698,19 @@ button:focus-visible {
     background: var(--color-surface-soft);
 }
 
-.contact-content {
+.contact-panel {
     max-width: 720px;
     margin-inline: auto;
     text-align: center;
 }
 
-.contact-content h2 {
+.contact-panel h2 {
     margin-bottom: 1.5rem;
     font-size: clamp(2.3rem, 5vw, 3.7rem);
     letter-spacing: -0.05em;
 }
 
-.contact-content > p:not(.eyebrow) {
+.contact-panel > p:not(.eyebrow) {
     margin-bottom: 2rem;
     color: var(--color-muted);
     font-size: 1.05rem;
@@ -888,4 +888,52 @@ button:focus-visible {
         font-size: 2.5rem;
     }
 
+}
+
+/* Hero illustration compatibility */
+
+.visual-code {
+    color: var(--color-primary);
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 800;
+    transform: rotate(8deg);
+}
+
+.visual-grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(var(--color-border) 1px, transparent 1px),
+        linear-gradient(90deg, var(--color-border) 1px, transparent 1px);
+    background-size: 32px 32px;
+    opacity: 0.25;
+    pointer-events: none;
+}
+
+.visual-label {
+    position: absolute;
+    z-index: 4;
+    padding: 0.35rem 0.6rem;
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    background: var(--color-surface);
+    color: var(--color-primary);
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+}
+
+.label-one {
+    top: 8%;
+    left: 5%;
+}
+
+.label-two {
+    top: 42%;
+    right: 0;
+}
+
+.label-three {
+    bottom: 8%;
+    left: 5%;
 }
